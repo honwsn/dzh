@@ -1,45 +1,41 @@
 package com.hw.dzh.DataCommand;
 
 import com.android.volley.VolleyError;
+import com.google.protobuf.Message;
 import com.hw.dzh.proto.ProtoCommandExecutor;
 import com.hw.dzh.proto.ProtoRequest;
 
 public class DataCommand implements com.hw.dzh.proto.ProtoRequestCallBack {
 	
-	public interface onDataCommandFinishedListener {
-		
+	public interface onProtoRequestFinishedListener {
 		public void onSuccess(Command cmd, long optionalInfo1, int optionalInfo2);
-
 		public void onFail(Command cmd, long optionalInfo, int errorType);
 	}
 	
-	protected onDataCommandFinishedListener mListener;
+	protected onProtoRequestFinishedListener mListener;
 	protected ProtoRequest mRequest;
-	protected Command mCommandID;
-	protected String mServerName = "circle";
-	protected String mReqName = "stReq";
-	protected String mRspName = "stRsp";
-	protected String mFuncName = "";
 	public long   mStartTime = System.currentTimeMillis();
 
-	protected void setCommandID(Command id) {
-		this.mCommandID = id;
-	}
-
-	public Command getCommandID() {
-		return mCommandID;
-	}
+//	public DataCommand(String serverName,String funcName,Command id,Message payLoad,onProtoRequestFinishedListener listener){
+//		mRequest = new ProtoRequest(serverName,funcName,payLoad);
+//		mRequest.setCommandID(id);
+//		mListener = listener;
+//	}
+//	
 	
-	public void setListener(onDataCommandFinishedListener mListener) {
-		this.mListener = mListener;
+	public void setListener(onProtoRequestFinishedListener listener) {
+		this.mListener = listener;
 	}
 
 	public void cancel(){
 		this.mListener = null;
-	//	mRequest.cancel();
+		mRequest.cancel();
 	}
 
 	public boolean execute() {
+		if(mRequest == null)
+			return false;
+		
 		boolean res = true;
 		try{
 			res = ProtoCommandExecutor.getInstance().doExecute(mRequest, this);
@@ -52,13 +48,12 @@ public class DataCommand implements com.hw.dzh.proto.ProtoRequestCallBack {
 
 	@Override
 	public void onResponse(byte[] arg0) {
-		// TODO Auto-generated method stub
-
+		//parse data and notify
 	}
 
 	@Override
 	public void onErrorResponse(VolleyError arg0) {
-		// TODO Auto-generated method stub
+		//parse data and notify
 
 	}
 
