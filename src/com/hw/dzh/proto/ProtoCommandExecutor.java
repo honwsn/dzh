@@ -15,7 +15,6 @@ public class ProtoCommandExecutor {
 	public ProtoCommandExecutor() {
 		// TODO Auto-generated constructor stub
 	}
-	private static final String TAG = "WupCommandExecutor";
 	private static ProtoCommandExecutor mInstance;
 	private static Context mContext;
 	private static RequestQueue mQueue;

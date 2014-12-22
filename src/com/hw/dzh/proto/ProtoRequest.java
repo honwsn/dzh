@@ -57,7 +57,7 @@ public class ProtoRequest {
 		ProtoDzh.ProtoPacket.Builder builder = ProtoDzh.ProtoPacket.newBuilder();
 		builder.setServerName(mServerName);
 		builder.setFuncName(mFuncName);
-		builder.setPayload(mPayLoad.toByteString());
+		builder.setPayLoad(mPayLoad.toByteString());
 		ProtoDzh.ProtoPacket packet= builder.build();
 		return packet.toByteArray();
 	}

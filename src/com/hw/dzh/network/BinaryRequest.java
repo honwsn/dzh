@@ -14,7 +14,7 @@ import com.hw.dzh.utils.BytesBuffer;
 
 /**
  * @author maxxiang
- * 扩展自volley, 提供multipart/form-data的post功能，简单说是为了支持wup的post能力�?
+ * 扩展自volley, 提供multipart/form-data的post功能，简单说是为了支持wup的post能力�?
  * Create On: 2014-5-7 
  */
 public class BinaryRequest extends Request<byte[]> {

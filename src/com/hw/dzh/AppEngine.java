@@ -61,31 +61,31 @@ public class AppEngine {
 		return false;
 	}
 
-	private void onInitializeNeworkStateMachine() {
-		mNetWorkConnected = isNetworkAvailable();
-		mNetWorkReceiver = new BroadcastReceiver() {
-			@Override
-			public void onReceive(Context context, Intent intent) {
-				String action = intent.getAction();
-				if (action.equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
-					ConnectivityManager connectivityManager = (ConnectivityManager) mApplicationContext.getSystemService(Context.CONNECTIVITY_SERVICE);
-					NetworkInfo info = connectivityManager.getActiveNetworkInfo();
-
-					if (info != null && info.isConnected()) {
-						MttLog.d("onReceive(): isConnected=" + info.isConnected() + ", isAvailable=" + info.isAvailable());
-
-						if (!mNetWorkConnected) {
-							mNetWorkConnected = true;
-							Toaster.show(getApplicationContext(), "网络已经恢复", Toaster.SHORT);
-						}
-					} else if (mNetWorkConnected) {
-						mNetWorkConnected = false;
-						Toaster.show(getApplicationContext(), "当前网络不可用！", Toaster.SHORT);
-					}
-				}
-			}
-		};
-	}
+//	private void onInitializeNeworkStateMachine() {
+//		mNetWorkConnected = isNetworkAvailable();
+//		mNetWorkReceiver = new BroadcastReceiver() {
+//			@Override
+//			public void onReceive(Context context, Intent intent) {
+//				String action = intent.getAction();
+//				if (action.equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
+//					ConnectivityManager connectivityManager = (ConnectivityManager) mApplicationContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+//					NetworkInfo info = connectivityManager.getActiveNetworkInfo();
+//
+//					if (info != null && info.isConnected()) {
+//						MttLog.d("onReceive(): isConnected=" + info.isConnected() + ", isAvailable=" + info.isAvailable());
+//
+//						if (!mNetWorkConnected) {
+//							mNetWorkConnected = true;
+//							Toaster.show(getApplicationContext(), "网络已经恢复", Toaster.SHORT);
+//						}
+//					} else if (mNetWorkConnected) {
+//						mNetWorkConnected = false;
+//						Toaster.show(getApplicationContext(), "当前网络不可用！", Toaster.SHORT);
+//					}
+//				}
+//			}
+//		};
+//	}
 
 	public void onInitialize(Context context) {
 		setApplicationContext(context);
@@ -93,7 +93,7 @@ public class AppEngine {
 		// 初始化图片cache的类
 		ImageCacheManager.getInstance().init(context);
 
-		onInitializeNeworkStateMachine();
+//		onInitializeNeworkStateMachine();
 
 	}
 

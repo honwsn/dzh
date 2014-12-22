@@ -141,13 +141,13 @@ public final class ProtoDzh {
         getFuncNameBytes();
 
     /**
-     * <code>required bytes payload = 3;</code>
+     * <code>required bytes payLoad = 3;</code>
      */
-    boolean hasPayload();
+    boolean hasPayLoad();
     /**
-     * <code>required bytes payload = 3;</code>
+     * <code>required bytes payLoad = 3;</code>
      */
-    com.google.protobuf.ByteString getPayload();
+    com.google.protobuf.ByteString getPayLoad();
   }
   /**
    * Protobuf type {@code com.hw.dzh.data.proto.ProtoPacket}
@@ -215,7 +215,7 @@ public final class ProtoDzh {
             }
             case 26: {
               bitField0_ |= 0x00000004;
-              payload_ = input.readBytes();
+              payLoad_ = input.readBytes();
               break;
             }
           }
@@ -343,24 +343,24 @@ public final class ProtoDzh {
     }
 
     public static final int PAYLOAD_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString payload_;
+    private com.google.protobuf.ByteString payLoad_;
     /**
-     * <code>required bytes payload = 3;</code>
+     * <code>required bytes payLoad = 3;</code>
      */
-    public boolean hasPayload() {
+    public boolean hasPayLoad() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required bytes payload = 3;</code>
+     * <code>required bytes payLoad = 3;</code>
      */
-    public com.google.protobuf.ByteString getPayload() {
-      return payload_;
+    public com.google.protobuf.ByteString getPayLoad() {
+      return payLoad_;
     }
 
     private void initFields() {
       serverName_ = "";
       funcName_ = "";
-      payload_ = com.google.protobuf.ByteString.EMPTY;
+      payLoad_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -376,7 +376,7 @@ public final class ProtoDzh {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasPayload()) {
+      if (!hasPayLoad()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -394,7 +394,7 @@ public final class ProtoDzh {
         output.writeBytes(2, getFuncNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, payload_);
+        output.writeBytes(3, payLoad_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -415,7 +415,7 @@ public final class ProtoDzh {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, payload_);
+          .computeBytesSize(3, payLoad_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -538,7 +538,7 @@ public final class ProtoDzh {
         bitField0_ = (bitField0_ & ~0x00000001);
         funcName_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        payload_ = com.google.protobuf.ByteString.EMPTY;
+        payLoad_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -579,7 +579,7 @@ public final class ProtoDzh {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.payload_ = payload_;
+        result.payLoad_ = payLoad_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -606,8 +606,8 @@ public final class ProtoDzh {
           funcName_ = other.funcName_;
           onChanged();
         }
-        if (other.hasPayload()) {
-          setPayload(other.getPayload());
+        if (other.hasPayLoad()) {
+          setPayLoad(other.getPayLoad());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -622,7 +622,7 @@ public final class ProtoDzh {
           
           return false;
         }
-        if (!hasPayload()) {
+        if (!hasPayLoad()) {
           
           return false;
         }
@@ -800,37 +800,37 @@ public final class ProtoDzh {
         return this;
       }
 
-      private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf.ByteString payLoad_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>required bytes payload = 3;</code>
+       * <code>required bytes payLoad = 3;</code>
        */
-      public boolean hasPayload() {
+      public boolean hasPayLoad() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required bytes payload = 3;</code>
+       * <code>required bytes payLoad = 3;</code>
        */
-      public com.google.protobuf.ByteString getPayload() {
-        return payload_;
+      public com.google.protobuf.ByteString getPayLoad() {
+        return payLoad_;
       }
       /**
-       * <code>required bytes payload = 3;</code>
+       * <code>required bytes payLoad = 3;</code>
        */
-      public Builder setPayload(com.google.protobuf.ByteString value) {
+      public Builder setPayLoad(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000004;
-        payload_ = value;
+        payLoad_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required bytes payload = 3;</code>
+       * <code>required bytes payLoad = 3;</code>
        */
-      public Builder clearPayload() {
+      public Builder clearPayLoad() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        payload_ = getDefaultInstance().getPayload();
+        payLoad_ = getDefaultInstance().getPayLoad();
         onChanged();
         return this;
       }
@@ -1835,6 +1835,1149 @@ public final class ProtoDzh {
     // @@protoc_insertion_point(class_scope:com.hw.dzh.data.proto.UserInfo)
   }
 
+  public interface ResponsePacketOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.hw.dzh.data.proto.ResponsePacket)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 rspCode = 1;</code>
+     */
+    boolean hasRspCode();
+    /**
+     * <code>required int32 rspCode = 1;</code>
+     */
+    int getRspCode();
+
+    /**
+     * <code>required bytes payLoad = 2;</code>
+     */
+    boolean hasPayLoad();
+    /**
+     * <code>required bytes payLoad = 2;</code>
+     */
+    com.google.protobuf.ByteString getPayLoad();
+  }
+  /**
+   * Protobuf type {@code com.hw.dzh.data.proto.ResponsePacket}
+   */
+  public static final class ResponsePacket extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.hw.dzh.data.proto.ResponsePacket)
+      ResponsePacketOrBuilder {
+    // Use ResponsePacket.newBuilder() to construct.
+    private ResponsePacket(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ResponsePacket(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ResponsePacket defaultInstance;
+    public static ResponsePacket getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ResponsePacket getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResponsePacket(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              rspCode_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              payLoad_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ResponsePacket_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ResponsePacket_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hw.dzh.data.proto.ProtoDzh.ResponsePacket.class, com.hw.dzh.data.proto.ProtoDzh.ResponsePacket.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ResponsePacket> PARSER =
+        new com.google.protobuf.AbstractParser<ResponsePacket>() {
+      public ResponsePacket parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResponsePacket(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResponsePacket> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int RSPCODE_FIELD_NUMBER = 1;
+    private int rspCode_;
+    /**
+     * <code>required int32 rspCode = 1;</code>
+     */
+    public boolean hasRspCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 rspCode = 1;</code>
+     */
+    public int getRspCode() {
+      return rspCode_;
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString payLoad_;
+    /**
+     * <code>required bytes payLoad = 2;</code>
+     */
+    public boolean hasPayLoad() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required bytes payLoad = 2;</code>
+     */
+    public com.google.protobuf.ByteString getPayLoad() {
+      return payLoad_;
+    }
+
+    private void initFields() {
+      rspCode_ = 0;
+      payLoad_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasRspCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPayLoad()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, rspCode_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, payLoad_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, rspCode_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, payLoad_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.hw.dzh.data.proto.ProtoDzh.ResponsePacket prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.hw.dzh.data.proto.ResponsePacket}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.hw.dzh.data.proto.ResponsePacket)
+        com.hw.dzh.data.proto.ProtoDzh.ResponsePacketOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ResponsePacket_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ResponsePacket_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hw.dzh.data.proto.ProtoDzh.ResponsePacket.class, com.hw.dzh.data.proto.ProtoDzh.ResponsePacket.Builder.class);
+      }
+
+      // Construct using com.hw.dzh.data.proto.ProtoDzh.ResponsePacket.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        rspCode_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        payLoad_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ResponsePacket_descriptor;
+      }
+
+      public com.hw.dzh.data.proto.ProtoDzh.ResponsePacket getDefaultInstanceForType() {
+        return com.hw.dzh.data.proto.ProtoDzh.ResponsePacket.getDefaultInstance();
+      }
+
+      public com.hw.dzh.data.proto.ProtoDzh.ResponsePacket build() {
+        com.hw.dzh.data.proto.ProtoDzh.ResponsePacket result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.hw.dzh.data.proto.ProtoDzh.ResponsePacket buildPartial() {
+        com.hw.dzh.data.proto.ProtoDzh.ResponsePacket result = new com.hw.dzh.data.proto.ProtoDzh.ResponsePacket(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.rspCode_ = rspCode_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.payLoad_ = payLoad_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hw.dzh.data.proto.ProtoDzh.ResponsePacket) {
+          return mergeFrom((com.hw.dzh.data.proto.ProtoDzh.ResponsePacket)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hw.dzh.data.proto.ProtoDzh.ResponsePacket other) {
+        if (other == com.hw.dzh.data.proto.ProtoDzh.ResponsePacket.getDefaultInstance()) return this;
+        if (other.hasRspCode()) {
+          setRspCode(other.getRspCode());
+        }
+        if (other.hasPayLoad()) {
+          setPayLoad(other.getPayLoad());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasRspCode()) {
+          
+          return false;
+        }
+        if (!hasPayLoad()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hw.dzh.data.proto.ProtoDzh.ResponsePacket parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hw.dzh.data.proto.ProtoDzh.ResponsePacket) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int rspCode_ ;
+      /**
+       * <code>required int32 rspCode = 1;</code>
+       */
+      public boolean hasRspCode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 rspCode = 1;</code>
+       */
+      public int getRspCode() {
+        return rspCode_;
+      }
+      /**
+       * <code>required int32 rspCode = 1;</code>
+       */
+      public Builder setRspCode(int value) {
+        bitField0_ |= 0x00000001;
+        rspCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 rspCode = 1;</code>
+       */
+      public Builder clearRspCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rspCode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString payLoad_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>required bytes payLoad = 2;</code>
+       */
+      public boolean hasPayLoad() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required bytes payLoad = 2;</code>
+       */
+      public com.google.protobuf.ByteString getPayLoad() {
+        return payLoad_;
+      }
+      /**
+       * <code>required bytes payLoad = 2;</code>
+       */
+      public Builder setPayLoad(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        payLoad_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bytes payLoad = 2;</code>
+       */
+      public Builder clearPayLoad() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        payLoad_ = getDefaultInstance().getPayLoad();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.hw.dzh.data.proto.ResponsePacket)
+    }
+
+    static {
+      defaultInstance = new ResponsePacket(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.hw.dzh.data.proto.ResponsePacket)
+  }
+
+  public interface ForumReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.hw.dzh.data.proto.ForumReply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string title = 1;</code>
+     */
+    boolean hasTitle();
+    /**
+     * <code>required string title = 1;</code>
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>required string title = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>required string url = 2;</code>
+     */
+    boolean hasUrl();
+    /**
+     * <code>required string url = 2;</code>
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>required string url = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+  }
+  /**
+   * Protobuf type {@code com.hw.dzh.data.proto.ForumReply}
+   */
+  public static final class ForumReply extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.hw.dzh.data.proto.ForumReply)
+      ForumReplyOrBuilder {
+    // Use ForumReply.newBuilder() to construct.
+    private ForumReply(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ForumReply(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ForumReply defaultInstance;
+    public static ForumReply getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ForumReply getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ForumReply(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              title_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              url_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ForumReply_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ForumReply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hw.dzh.data.proto.ProtoDzh.ForumReply.class, com.hw.dzh.data.proto.ProtoDzh.ForumReply.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ForumReply> PARSER =
+        new com.google.protobuf.AbstractParser<ForumReply>() {
+      public ForumReply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ForumReply(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ForumReply> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TITLE_FIELD_NUMBER = 1;
+    private java.lang.Object title_;
+    /**
+     * <code>required string title = 1;</code>
+     */
+    public boolean hasTitle() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string title = 1;</code>
+     */
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          title_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string title = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_FIELD_NUMBER = 2;
+    private java.lang.Object url_;
+    /**
+     * <code>required string url = 2;</code>
+     */
+    public boolean hasUrl() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string url = 2;</code>
+     */
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          url_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string url = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      title_ = "";
+      url_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasTitle()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasUrl()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getTitleBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getUrlBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getTitleBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getUrlBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.hw.dzh.data.proto.ProtoDzh.ForumReply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.hw.dzh.data.proto.ProtoDzh.ForumReply prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.hw.dzh.data.proto.ForumReply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.hw.dzh.data.proto.ForumReply)
+        com.hw.dzh.data.proto.ProtoDzh.ForumReplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ForumReply_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ForumReply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hw.dzh.data.proto.ProtoDzh.ForumReply.class, com.hw.dzh.data.proto.ProtoDzh.ForumReply.Builder.class);
+      }
+
+      // Construct using com.hw.dzh.data.proto.ProtoDzh.ForumReply.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        title_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        url_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hw.dzh.data.proto.ProtoDzh.internal_static_com_hw_dzh_data_proto_ForumReply_descriptor;
+      }
+
+      public com.hw.dzh.data.proto.ProtoDzh.ForumReply getDefaultInstanceForType() {
+        return com.hw.dzh.data.proto.ProtoDzh.ForumReply.getDefaultInstance();
+      }
+
+      public com.hw.dzh.data.proto.ProtoDzh.ForumReply build() {
+        com.hw.dzh.data.proto.ProtoDzh.ForumReply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.hw.dzh.data.proto.ProtoDzh.ForumReply buildPartial() {
+        com.hw.dzh.data.proto.ProtoDzh.ForumReply result = new com.hw.dzh.data.proto.ProtoDzh.ForumReply(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.title_ = title_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.url_ = url_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hw.dzh.data.proto.ProtoDzh.ForumReply) {
+          return mergeFrom((com.hw.dzh.data.proto.ProtoDzh.ForumReply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hw.dzh.data.proto.ProtoDzh.ForumReply other) {
+        if (other == com.hw.dzh.data.proto.ProtoDzh.ForumReply.getDefaultInstance()) return this;
+        if (other.hasTitle()) {
+          bitField0_ |= 0x00000001;
+          title_ = other.title_;
+          onChanged();
+        }
+        if (other.hasUrl()) {
+          bitField0_ |= 0x00000002;
+          url_ = other.url_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasTitle()) {
+          
+          return false;
+        }
+        if (!hasUrl()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hw.dzh.data.proto.ProtoDzh.ForumReply parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hw.dzh.data.proto.ProtoDzh.ForumReply) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>required string title = 1;</code>
+       */
+      public boolean hasTitle() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string title = 1;</code>
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            title_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string title = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string title = 1;</code>
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        title_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string title = 1;</code>
+       */
+      public Builder clearTitle() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        title_ = getDefaultInstance().getTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string title = 1;</code>
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        title_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>required string url = 2;</code>
+       */
+      public boolean hasUrl() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string url = 2;</code>
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            url_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string url = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string url = 2;</code>
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string url = 2;</code>
+       */
+      public Builder clearUrl() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        url_ = getDefaultInstance().getUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string url = 2;</code>
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        url_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.hw.dzh.data.proto.ForumReply)
+    }
+
+    static {
+      defaultInstance = new ForumReply(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.hw.dzh.data.proto.ForumReply)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_hw_dzh_data_proto_ProtoPacket_descriptor;
   private static
@@ -1845,6 +2988,16 @@ public final class ProtoDzh {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_hw_dzh_data_proto_UserInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_hw_dzh_data_proto_ResponsePacket_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_hw_dzh_data_proto_ResponsePacket_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_hw_dzh_data_proto_ForumReply_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_hw_dzh_data_proto_ForumReply_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1856,13 +3009,16 @@ public final class ProtoDzh {
     java.lang.String[] descriptorData = {
       "\n\016ProtoDzh.proto\022\025com.hw.dzh.data.proto\"" +
       "D\n\013ProtoPacket\022\022\n\nserverName\030\001 \002(\t\022\020\n\010fu" +
-      "ncName\030\002 \002(\t\022\017\n\007payload\030\003 \002(\014\"\214\001\n\010UserIn" +
+      "ncName\030\002 \002(\t\022\017\n\007payLoad\030\003 \002(\014\"\214\001\n\010UserIn" +
       "fo\022I\n\014eAccountType\030\001 \002(\0162\".com.hw.dzh.da" +
       "ta.proto.AccountType:\017ACCOUNT_UNKNOWN\022\017\n" +
       "\007sUserId\030\002 \002(\t\022\021\n\tsNickname\030\003 \001(\t\022\021\n\tsFa" +
-      "ceIcon\030\004 \001(\t*]\n\013AccountType\022\023\n\017ACCOUNT_U" +
-      "NKNOWN\020\000\022\016\n\nACCOUNT_QQ\020\001\022\022\n\016ACCOUNT_WECH" +
-      "AT\020\002\022\025\n\021ACCOUNT_SINAWEIBO\020\003B\nB\010ProtoDzh"
+      "ceIcon\030\004 \001(\t\"2\n\016ResponsePacket\022\017\n\007rspCod" +
+      "e\030\001 \002(\005\022\017\n\007payLoad\030\002 \002(\014\"(\n\nForumReply\022\r" +
+      "\n\005title\030\001 \002(\t\022\013\n\003url\030\002 \002(\t*]\n\013AccountTyp" +
+      "e\022\023\n\017ACCOUNT_UNKNOWN\020\000\022\016\n\nACCOUNT_QQ\020\001\022\022",
+      "\n\016ACCOUNT_WECHAT\020\002\022\025\n\021ACCOUNT_SINAWEIBO\020" +
+      "\003B\nB\010ProtoDzh"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1881,13 +3037,25 @@ public final class ProtoDzh {
     internal_static_com_hw_dzh_data_proto_ProtoPacket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_hw_dzh_data_proto_ProtoPacket_descriptor,
-        new java.lang.String[] { "ServerName", "FuncName", "Payload", });
+        new java.lang.String[] { "ServerName", "FuncName", "PayLoad", });
     internal_static_com_hw_dzh_data_proto_UserInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_hw_dzh_data_proto_UserInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_hw_dzh_data_proto_UserInfo_descriptor,
         new java.lang.String[] { "EAccountType", "SUserId", "SNickname", "SFaceIcon", });
+    internal_static_com_hw_dzh_data_proto_ResponsePacket_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_hw_dzh_data_proto_ResponsePacket_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_hw_dzh_data_proto_ResponsePacket_descriptor,
+        new java.lang.String[] { "RspCode", "PayLoad", });
+    internal_static_com_hw_dzh_data_proto_ForumReply_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_hw_dzh_data_proto_ForumReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_hw_dzh_data_proto_ForumReply_descriptor,
+        new java.lang.String[] { "Title", "Url", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
