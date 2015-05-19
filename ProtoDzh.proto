@@ -1,0 +1,37 @@
+	package com.hw.dzh.data.proto;
+	option java_outer_classname = "ProtoDzh";
+
+	message ProtoPacket{
+	required string serverName = 1;
+	required string funcName = 2;
+	required bytes  payLoad = 3;
+	}
+	
+	enum AccountType
+    {
+        ACCOUNT_UNKNOWN   = 0;
+        ACCOUNT_QQ        = 1;
+        ACCOUNT_WECHAT    = 2;
+		ACCOUNT_SINAWEIBO    = 3;
+    };
+	
+	message UserInfo
+    {
+        required AccountType      eAccountType = 1[default = ACCOUNT_UNKNOWN];
+        required string            sUserId = 2;
+        optional string           sNickname = 3;                          // 昵称
+        optional string           sFaceIcon = 4;                          // 头像
+    };
+	
+
+	message ResponsePacket
+	{
+		required int32 rspCode = 1;
+		required bytes  payLoad = 2;
+	}
+
+    message ForumReply
+    {
+        required string	          title = 1; 
+        required string           url =  2;
+    }
