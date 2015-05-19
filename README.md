@@ -6,7 +6,11 @@ ProtoDzh.proto is google proto file.
 
 
 
+
+
+
 encode：DzhActivity.java
+
 	ProtoDzh.UserInfo.Builder bd = ProtoDzh.UserInfo.newBuilder();
 	bd.setSNickname("hello world");
 	bd.setSUserId("100000");
@@ -18,6 +22,7 @@ encode：DzhActivity.java
 
 
 decode：DataCommand.java
+
 	//parse data and notify
 	ProtoDzh.ResponsePacket rspPacket;
 	try{
